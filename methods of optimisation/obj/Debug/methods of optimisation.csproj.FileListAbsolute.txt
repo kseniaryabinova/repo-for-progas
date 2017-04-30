@@ -1,0 +1,14 @@
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\bin\Debug\methods of optimisation.exe.config
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\bin\Debug\methods of optimisation.exe
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\bin\Debug\methods of optimisation.pdb
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\obj\Debug\methods of optimisation.csprojResolveAssemblyReference.cache
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\obj\Debug\methods_of_optimisation.Form1.resources
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\obj\Debug\methods_of_optimisation.Properties.Resources.resources
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\obj\Debug\methods of optimisation.csproj.GenerateResource.Cache
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\obj\Debug\methods of optimisation.exe
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\obj\Debug\methods of optimisation.pdb
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\bin\Debug\MathNet.Numerics.dll
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\bin\Debug\MathNet.Numerics.xml
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\bin\Debug\Antlr3.Runtime.dll
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\bin\Debug\Antlr3.Runtime.pdb
+O:\Документы\Visual Studio 2015\Projects\methods of optimisation\methods of optimisation\bin\Debug\Jace.dll
