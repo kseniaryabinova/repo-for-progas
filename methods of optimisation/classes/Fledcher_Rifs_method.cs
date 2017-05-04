@@ -15,7 +15,7 @@ namespace methods_of_optimisation.classes
 
         public Fledcher_Rifs_method(double[] vector, Func<double[], double> f,
             double epsilon1 = 0.01, double epsilon2 = 0.015)
-                : base(vector, f, epsilon1 = 0.01, epsilon2 = 0.015)
+                : base(vector, f, epsilon1, epsilon2)
         { }
 
         protected double golden_section(Func<double, double> g)
