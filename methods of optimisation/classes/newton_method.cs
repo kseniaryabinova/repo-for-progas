@@ -42,14 +42,24 @@ namespace methods_of_optimisation.classes
                 vectorPred = vect;
                 vect = vect + H.Inverse()*(-grad);
 
+                var matr = H.Inverse();
+
                 str += "\tитерация №" + (1001 - N) + 
                     "\r\nматрица Гессе: \r\n";
                 for (int i = 0; i < H.ColumnCount; i++, str+="\r\n")
                     for (int j = 0; j < H.RowCount; j++)
-                        str += Math.Round(H[i, j],3) + "  ";
-                str += "вектор = {";
+                        str += Math.Round(H[i, j],5) + "  ";
+                str += "\r\nобратная матрица Гессе: \r\n";
+                for (int i = 0; i < matr.ColumnCount; i++, str += "\r\n")
+                    for (int j = 0; j < matr.RowCount; j++)
+                        str += Math.Round(matr[i, j], 5) + "  ";
+                str += "градиент текущего x = {";
+                foreach (var el in grad)
+                    str += (Math.Round(el, 5)).ToString() + ";  ";
+                str = str.Substring(0, str.Length - 3);
+                str += "}\r\nвектор = {";
                 foreach (var el in vect)
-                    str += (Math.Round(el, 3)).ToString() + ";  ";
+                    str += (Math.Round(el, 5)).ToString() + ";  ";
                 str = str.Substring(0, str.Length - 3);
                 str += "}\r\n\r\n";
 

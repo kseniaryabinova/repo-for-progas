@@ -67,7 +67,11 @@ namespace methods_of_optimisation.classes
                 vect = vect + alpha * s;
 
                 str += "\tитерация №" + (1001 - N) +
-                    "\r\nalpha = " + Math.Round(alpha, 3) +
+                    "\r\nградиент текущего x = {";
+                foreach (var el in grad)
+                    str += (Math.Round(el, 3)).ToString() + ";  ";
+                str = str.Substring(0, str.Length - 3);
+                str += "}\r\nalpha = " + Math.Round(alpha, 3) +
                     "\r\ns = {";
                 foreach (var el in s)
                     str += (Math.Round(el, 3)).ToString() + ";  ";

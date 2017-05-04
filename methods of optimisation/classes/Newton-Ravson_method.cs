@@ -81,7 +81,12 @@ namespace methods_of_optimisation
                 vectorPred = vect;
                 vect = vect + alpha * H * (-grad);
 
-                str += "alpha = "+ Math.Round(alpha, 3) + "\r\nвектор = {";
+                str += "alpha = " + Math.Round(alpha, 3);
+                str += "\r\nградиент текущего x = {";
+                foreach (var el in grad)
+                    str += (Math.Round(el, 3)).ToString() + ";  ";
+                str = str.Substring(0, str.Length - 3);
+                str += "}\r\nвектор = {";
                 foreach (var el in vect)
                     str += (Math.Round(el, 3)).ToString() + ";  ";
                 str = str.Substring(0, str.Length - 3);
