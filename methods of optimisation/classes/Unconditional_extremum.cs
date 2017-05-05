@@ -26,9 +26,9 @@ namespace methods_of_optimisation
         protected virtual Vector<double> gradient(Vector<double> vec)
         {
             double[] v = vec.ToArray();
-            vector = v;
+            var vect = vec.ToArray();
             for (int i = 0; i < vec.Count; i++)
-                v[i] = Differentiate.PartialDerivative(f, vector, i, 1);
+                v[i] = Differentiate.FirstPartialDerivativeFunc(f, i)(vect);
             return DenseVector.OfArray(v);
         }
     }
