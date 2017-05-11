@@ -49,7 +49,7 @@ namespace methods_of_optimisation.classes
                 for (int i = 0; i < H.ColumnCount; i++, str+="\r\n")
                     for (int j = 0; j < H.RowCount; j++)
                         str += Math.Round(H[i, j],5) + "  ";
-                str += "\r\nобратная матрица Гессе: \r\n";
+                str += "обратная матрица Гессе: \r\n";
                 for (int i = 0; i < matr.ColumnCount; i++, str += "\r\n")
                     for (int j = 0; j < matr.RowCount; j++)
                         str += Math.Round(matr[i, j], 5) + "  ";

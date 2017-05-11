@@ -61,7 +61,7 @@ namespace methods_of_optimisation
         public override string algorithm()
         {
             Vector<double> vect = DenseVector.OfArray(vector), vectorPred = vect,
-                grad = vect;
+                grad = vect, s = vect;
             string str = "";
             int N = 1000;
 
@@ -77,12 +77,21 @@ namespace methods_of_optimisation
                         str += Math.Round(H[i, j], 3) + "  ";
 
                 H = H.Inverse();
+                s = H * (-grad);
                 alpha = golden_section((double x) => { return f((vect + x * H * (-grad)).ToArray()); });
                 vectorPred = vect;
-                vect = vect + alpha * H * (-grad);
+                vect = vect + alpha * s;
 
-                str += "alpha = " + Math.Round(alpha, 3);
-                str += "\r\nградиент текущего x = {";
+                str += "обратная матрица Гессе: \r\n";
+                for (int i = 0; i < H.ColumnCount; i++, str += "\r\n")
+                    for (int j = 0; j < H.RowCount; j++)
+                        str += Math.Round(H[i, j], 5) + "  ";
+                str += "alpha = " + Math.Round(alpha, 3) + 
+                        "\r\ns = {";
+                foreach (var el in s)
+                    str += (Math.Round(el, 3)).ToString() + ";  ";
+                str = str.Substring(0, str.Length - 3); ;
+                str += "}\r\nградиент текущего x = {";
                 foreach (var el in grad)
                     str += (Math.Round(el, 3)).ToString() + ";  ";
                 str = str.Substring(0, str.Length - 3);
