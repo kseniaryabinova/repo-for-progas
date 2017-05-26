@@ -102,24 +102,13 @@ namespace methods_of_optimisation
                 str += "}\r\n\r\n";
 
                 if (grad.L2Norm() < epsilon1)
-                {
-                    str += "выход по основному условию";
-                    break;
-                }
+                    return str + "выход по основному условию";
                 if ((vectorPred - vect).L2Norm() < epsilon2
                     && Math.Abs(f(vect.ToArray()) - f(vectorPred.ToArray())) < epsilon2)
-                {
-                    str += "выход по дополнительному условию";
-                    break;
-                }
+                    return str + "выход по дополнительному условию";
                 if (--N == 0)
-                {
-                    str += "число итераций достигло максимума";
-                    break;
-                }
+                    return str + "число итераций достигло максимума";
             }
-
-            return str;
         }
     }
 }
